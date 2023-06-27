@@ -12,7 +12,7 @@
     },
     "scripts": {
         "dev": "npx chokidar \"locales/**/*.yml\" -c \"npx kill-port 4444 && next dev -p 4444\" --initial --debounce 500",
-        "build": "next build",
+        "build": "npx prisma generate && next build",
         "start": "next start",
         "lint": "next lint",
         "test": "npm run test-unit && npm run test-integration-todo-fix",
@@ -31,6 +31,7 @@
     "dependencies": {
         "@monaco-editor/react": "4.5.1",
         "@next/font": "13.1.1",
+        "@prisma/client": "^4.16.1",
         "@types/file-saver": "2.0.5",
         "@uiw/react-markdown-editor": "5.11.1",
         "configchecker": "1.5.1",
@@ -98,6 +99,7 @@
         "moment": "2.29.4",
         "organize-imports-cli": "0.10.0",
         "prettier": "2.8.1",
+        "prisma": "^4.16.1",
         "ts-jest": "29.0.5",
         "ts-node": "10.9.1",
         "type-fest": "3.10.0"
